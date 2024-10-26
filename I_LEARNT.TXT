@@ -1,0 +1,41 @@
+1. DELETING COLOUMN IN PG :
+        ALTER TABLE table_name
+        DROP COLUMN column_name;
+
+2. ADDING COLOUMN IN PG :
+        ALTER TABLE table_name
+        ADD COLUMN column_name data_type;
+
+3. TO ALTER AND SET ANOTHER PROPERTY TO DATA TYPE:
+        ALTER TABLE table_name
+        ALTER COLUMN column_name SET NOT NULL;
+   TO CHANGE OR EDIT ELMENT OF AN ELMT IN PG: 
+        UPDATE table_name 
+        SET coloumn_name = ($1) 
+        WHERE id = $2", [item, id]
+
+4. when rendering home page by get u should send everything to index.ejs as variable or js objects then...
+        res.render("index.ejs",{
+             Title : Today,
+             items : list
+        });
+
+5. The onchange event in a checkbox is an event handler in HTML and JavaScript that      triggers when the state of the checkbox changes. This event occurs when the checkbox is either checked or unchecked by the user.
+        How onchange Works:
+        The onchange event fires when the user makes a change to the checkbox, i.e., when the checkbox is either checked or unchecked.
+        You can use this event to execute a JavaScript function that responds to the change in the checkbox's state.
+
+6. The name attribute in HTML is crucial when working with forms. It specifies the name of an input element, which is used as the key for the corresponding value when the form data is submitted. This key-value pair is sent to the server, where the key is the name attribute and the value is what the user has entered or selected.
+
+7. The .submit() method in JavaScript is used to programmatically submit a form. It triggers the form's submission process without the user needing to click a submit button.
+
+8. {onchange="this.form.submit()": When the checkbox is checked or unchecked, it          automatically submits the form. This is a JavaScript function that submits the form when the checkbox state changes.
+
+name="deleteItemId": The name attribute specifies the key that will be used to send the   value to the server. In this case, it's named deleteItemId.
+
+value="<%= item.id %>": This is where EJS comes in. <%= item.id %> dynamically injects the id of the current item into the HTML. So, when the checkbox is submitted, the value sent to the server will be the id of the item record.}
+
+9. id="title<%= item.id %>": The id attribute dynamically includes the item.id to uniquely identify this paragraph element. For example, if item.id is 3, the id of this paragraph will be title3.
+    
+
+
